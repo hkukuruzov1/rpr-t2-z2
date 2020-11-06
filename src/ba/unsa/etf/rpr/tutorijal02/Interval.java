@@ -100,7 +100,9 @@ public boolean isNull(){
         return "("+this.getPocetna()+","+this.getKrajnja()+")";
 
     }
-    public boolean equals( Interval f){
+    @Override
+    public boolean equals(Object o){
+        Interval f=(Interval) o;
         return this.getPocetna()==f.getPocetna() && this.getKrajnja()==f.getKrajnja() &&
                 f.isKrajnjiInterval()==this.isKrajnjiInterval() && f.isPocetniInterval()==this.isPocetniInterval();
     }
